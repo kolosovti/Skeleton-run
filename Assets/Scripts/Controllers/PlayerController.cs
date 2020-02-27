@@ -5,22 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float forceVertical;
-    private Rigidbody2D objectRB;
+    private Rigidbody2D objectRigidBody;
     private bool isGrounded;
-    GameController gameController;
+    private GameController gameController;
 
     void Start()
     {
         gameController = GameController.Instance;
-        objectRB = GetComponent<Rigidbody2D>();
+        objectRigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        objectRB.velocity += Move();
+        objectRigidBody.velocity += GetDirection();
     }
 
-    private Vector2 Move()
+    private Vector2 GetDirection()
     {
         Vector2 direction = Vector2.zero;
 

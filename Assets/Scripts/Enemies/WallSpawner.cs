@@ -40,10 +40,10 @@ class WallSpawner : MonoBehaviour, IEnemySpawner
         Transform wallTransform = newWall.GetComponent<Transform>();
         BoxCollider2D wallCollider = newWall.GetComponent<BoxCollider2D>();
 
-        wallRender.size = new Vector2(1, Random.Range(minHeight, maxHeight)); //Set wall size
-        wallTransform.position = spawnPosition; //Set default spawn position
+        wallRender.size = new Vector2(1, Random.Range(minHeight, maxHeight)); //Генерируем высоту стены
+        wallTransform.position = spawnPosition; //Перемещаем стену на позицию спавна за пределами кадра
 
-        //Set collider size and offset equal to wall size and position
+        //Подгоняем размеры и смещение коллайдера под растянутый спрайт
         wallCollider.size = wallRender.size; 
         wallCollider.offset *= wallRender.size.y;
 

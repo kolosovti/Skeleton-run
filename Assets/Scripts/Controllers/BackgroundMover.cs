@@ -15,6 +15,8 @@ public class BackgroundMover : MonoBehaviour
     void Update()
     {
         float offset = Time.time * speed;
+
+        //Смещение текстуры фона на 3D кваде
         backgroundRenderer.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
     }
 }

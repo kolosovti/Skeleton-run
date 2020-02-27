@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WallLiveCycle : MonoBehaviour
 {
-    private Transform wallTransform;
-    private Vector3 offset;
     [SerializeField] private float speed;
     [SerializeField] private float destroyPosition;
+    private Transform wallTransform;
+    private Vector3 offset;
 
     void Start()
     {

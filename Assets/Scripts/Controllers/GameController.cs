@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    //Использование интерфейса обеспечивает слабую связанность и расширяемость приложения
+    //Можно быстро добавить других "врагов" - например, деревья
     private IEnemySpawner spawner;
     private TimeController timeController;
     private UiController uiController;
